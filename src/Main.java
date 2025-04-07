@@ -16,7 +16,8 @@ public class Main {
     public enum Konfrontationstyp {
         Individuell, Team, Galaktisch, Multiversal
     }
-    public static class Event{
+
+    public static class Event {
         private int Id;
         private String Held;
         private String Antagonist;
@@ -24,7 +25,8 @@ public class Main {
         private String Ort;
         private LocalDate Datum;
         private double GlobalerEinfluss;
-    //getters and setters
+
+        //getters and setters
         public int getId() {
             return Id;
         }
@@ -81,6 +83,7 @@ public class Main {
             GlobalerEinfluss = globalerEinfluss;
         }
     }
+
     /**
      * Reads events from a JSON file.
      *
@@ -111,7 +114,7 @@ public class Main {
     /**
      * Writes events to a JSON file.
      *
-     * @param events   the list of events
+     * @param events    the list of events
      * @param threshold the path to the JSON file
      * @throws IOException if an error occurs while writing the file
      */
@@ -153,6 +156,7 @@ public class Main {
                     });
         }
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the threshold for global influence: ");
@@ -173,5 +177,4 @@ public class Main {
     }
 
 }
-
 
