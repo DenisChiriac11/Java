@@ -1,7 +1,5 @@
 package model;
 
-import model.Produkt;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,18 +16,8 @@ public class Charakter {
         this.gekaufteProdukte = new ArrayList<>();
     }
 
-    public void kaufeProdukt(Produkt produkt) {
-        this.gekaufteProdukte.add(produkt);
-    }
-
-    // Getter und Setter
-
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -52,8 +40,12 @@ public class Charakter {
         return gekaufteProdukte;
     }
 
-    public void setGekaufteProdukte(List<Produkt> gekaufteProdukte) {
-        this.gekaufteProdukte = gekaufteProdukte;
+    public void kaufeProdukt(Produkt produkt) {
+        this.gekaufteProdukte.add(produkt);
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }
